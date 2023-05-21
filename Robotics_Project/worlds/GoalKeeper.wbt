@@ -4,13 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/robotis/darwin-op/protos/Darwin-op.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/FifaSoccerBall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/Ball.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.3212554030782822 0.47393707914665917 -0.8198649955955821 1.3612934328278001
-  position 1.7928995127939515 2.257886537981462 2.342129940452519
+  orientation 0.0347342741161737 0.9964765096621064 -0.07634196678923294 0.5889737484649847
+  position -0.5440362165040113 0.04596059106908912 2.683770154117431
   follow "DARwIn-OP"
 }
 TexturedBackground {
@@ -34,9 +34,14 @@ Robot {
 }
 RobotstadiumSoccerField {
 }
+Ball {
+  translation 2.59 0 0.09991367199999998
+  color 1 0 0
+  radius 0.1
+}
 Darwin-op {
-  translation 4.33436 -0.0717036 0.238713
-  rotation -0.11268146522851508 0.0032720211552488207 0.993625775265273 3.083768168557213
+  translation 4.3577646580295895 -0.07456371978227842 0.23337304175487947
+  rotation -0.06294029532655154 -0.0012752891601659345 0.9980164792536066 3.082114528443551
   name "DARwIn-OP(1)"
   controller "visual_tracking"
   controllerArgs [
@@ -50,23 +55,21 @@ Darwin-op {
     }
   ]
 }
-FifaSoccerBall {
-  translation 2.40819 0.0133072 0.108629
-  rotation 0.11522364769251217 0.9858414743541689 -0.12181994276648642 1.5668066369688538
-}
 Darwin-op {
-  translation 2.14187 0.00863138 0.246674
-  rotation 0.013610585271197266 -0.999564144775026 0.026196802261848114 0.16588112311423361
-  controller "soccer"
+  hidden rotation_10 0.5774169352942289 0.5773169332504817 0.5773169332504281 2.094400000889279
+  translation 2.3637416700796225 0.011588157086375313 0.23296269014895155
+  rotation -0.05088997583805563 0.998194542654916 0.0319040024627793 0.12987113489825344
+  controller "visual_tracking"
   controllerArgs [
     ""
   ]
+  plasticColor 1 0.333333 0.498039
   headSlot [
     Camera {
       physics Physics {
       }
       recognitionColors [
-        0 0 0
+        1 0 0
       ]
       lens Lens {
       }
